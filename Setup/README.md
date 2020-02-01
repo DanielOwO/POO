@@ -3,7 +3,7 @@
 
 ## Istalación de dotnet core 2.2.
 Lo primero que tenemos que hacer es bajar el archivo de instalacion del siguiente [lugar](https://dotnet.microsoft.com/download).
-Es importante bajae el SDK porque **vamos a programar**.
+Es importante bajar el SDK porque **vamos a programar**.
 
 La pagina se ve asi:
 
