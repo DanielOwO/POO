@@ -17,3 +17,8 @@ La pagina se ve asi:
 ![VSC](https://github.com/DanielOwO/POO/blob/master/Setup/img/VSC.PNG "VSC")
 
 #### Instalación de git. conectado a tu cuenta de GitHub y VSC.
+Para finalizar con las instalaciones, es necesario descargar git. y vincularlo a nuestra cuenta de GitHub y a Visual Studio Code, la instalacion esta [aqui](https://git-scm.com/downloads).
+
+La pagina se ve asi:
+
+![git](https://github.com/DanielOwO/POO/blob/master/Setup/img/git.PNG "git")
