@@ -7,7 +7,7 @@ Es importante bajar el SDK porque **vamos a programar**.
 
 La pagina se ve asi:
 
-[.NET]: https://github.com/DanielOwO/POO/blob/master/Setup/img/core.PNG "core"
+![.NET](https://github.com/DanielOwO/POO/blob/master/Setup/img/core.PNG "core")
 
 ### Instalación y configuración de Visual Studio Code para C#.
 
