@@ -10,6 +10,10 @@ La pagina se ve asi:
 ![.NET](https://github.com/DanielOwO/POO/blob/master/Setup/img/core.PNG "core")
 
 ### Instalación y configuración de Visual Studio Code para C#.
+Una vez terminado de instalar dotnet es de suma importancia descargar VSC (Visual Studio Code) en [esta](https://code.visualstudio.com/download) pagina. 
 
+La pagina se ve asi:
+
+![VSC](https://github.com/DanielOwO/POO/blob/master/Setup/img/VSC.PNG "VSC")
 
 #### Instalación de git. conectado a tu cuenta de GitHub y VSC.
