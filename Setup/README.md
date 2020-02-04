@@ -7,7 +7,7 @@ Es importante bajar el SDK porque **vamos a programar**.
 
 La pagina se ve asi:
 
-![.NET][.\Setup\img.png"core"]
+![.NET](.\Setup\img.png"core")
 
 ### Instalación y configuración de Visual Studio Code para C#.
 
