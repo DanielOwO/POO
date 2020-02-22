@@ -4,10 +4,23 @@ namespace Pelicula
 {
     class Pelicula
     {
-        public string titulo;
-        public Int16 año;
+        private string titulo;
+        private Int16 año;
         public string pais;
         public string director;
+
+        public void setTitulo(string t)
+        {
+            titulo = t;
+
+
+        }
+
+        public void setAño(Int16 a)
+        {
+            año = a;
+
+        }
 
     }
 
@@ -25,6 +38,8 @@ namespace Pelicula
             p1.director = "Barry Jenkins";
             p2.pais = "Estados Unidos";
             p2.director = "Alejandro Gonzalez Iñarritu";
+
+            
 
         }
     }
