@@ -32,7 +32,18 @@ namespace Pelicula
             return año;
         }
         
-     
+        public Pelicula()
+        {
+
+        }
+        public Pelicula(string titulo, Int16 año )
+        {
+
+        }
+        public void imprime()
+        {
+            
+        }
 
     }
 
