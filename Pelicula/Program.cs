@@ -35,13 +35,14 @@ namespace Pelicula
             Pelicula p2 = new Pelicula();
             p1.titulo = "Luz de luna";
             p2.titulo = "Birdman";
-            p1.args = 2016;
+            p1.año = 2016;
             p2.año = 2014;
             p1.pais = "Estados Unidos";
             p1.director = "Barry Jenkins";
             p2.pais = "Estados Unidos";
             p2.director = "Alejandro Gonzalez Iñarritu";
             Console.WriteLine(p1.titulo + " " + p1.año);
+            Console.WriteLine(p2.titulo + " " + p2.año);
 
             
 
