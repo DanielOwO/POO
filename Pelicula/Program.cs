@@ -22,7 +22,15 @@ namespace Pelicula
 
         }
         
-        
+        public string getTitulo()
+        {
+            return titulo;
+        }
+
+        public Int16 getAño()
+        {
+            return año;
+        }
         
 
     }
@@ -46,10 +54,10 @@ namespace Pelicula
 
             p1.setTitulo("Luz de luna");
             p1.setAño(2016);
-            Console.WriteLine("{0}({1})", p1.setTitulo(), p1.setAño());
+            Console.WriteLine("{0}({1})", p1.getTitulo(), p1.getAño());
             p2.setTitulo("Birdman");
             p2.setAño(2014);
-            Console.WriteLine("{0}({1})", p2.setTitulo(), p2.setAño());
+            Console.WriteLine("{0}({1})", p2.getTitulo(), p2.getAño());
         }
     }
 }
