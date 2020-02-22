@@ -4,8 +4,8 @@ namespace Pelicula
 {
     class Pelicula
     {
-        public string titulo;
-        public Int16 año;
+        private string titulo;
+        private Int16 año;
         public string pais;
         public string director;
 
@@ -33,7 +33,7 @@ namespace Pelicula
         {
             Pelicula p1 = new Pelicula();
             Pelicula p2 = new Pelicula();
-            p1.titulo = "Luz de luna";
+            /*p1.titulo = "Luz de luna";
             p2.titulo = "Birdman";
             p1.año = 2016;
             p2.año = 2014;
@@ -42,7 +42,11 @@ namespace Pelicula
             p2.pais = "Estados Unidos";
             p2.director = "Alejandro Gonzalez Iñarritu";
             Console.WriteLine(p1.titulo + " " + p1.año);
-            Console.WriteLine(p2.titulo + " " + p2.año);
+            Console.WriteLine(p2.titulo + " " + p2.año); */
+
+            p1.setTitulo("Luz de luna");
+            p1.setAño(2016);
+            Console.WriteLine("{0}({1})", p1.setTitulo(), p1.setAño());
 
             
 
