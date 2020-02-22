@@ -4,8 +4,8 @@ namespace Pelicula
 {
     class Pelicula
     {
-        private string titulo;
-        private Int16 año;
+        public string titulo;
+        public Int16 año;
         public string pais;
         public string director;
 
@@ -21,6 +21,9 @@ namespace Pelicula
             año = a;
 
         }
+        
+        
+        
 
     }
 
@@ -38,6 +41,7 @@ namespace Pelicula
             p1.director = "Barry Jenkins";
             p2.pais = "Estados Unidos";
             p2.director = "Alejandro Gonzalez Iñarritu";
+            Console.WriteLine(p1.titulo + " " + p1.año);
 
             
 
