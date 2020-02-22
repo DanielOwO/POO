@@ -47,9 +47,9 @@ namespace Pelicula
             p1.setTitulo("Luz de luna");
             p1.setAño(2016);
             Console.WriteLine("{0}({1})", p1.setTitulo(), p1.setAño());
-
-            
-
+            p2.setTitulo("Birdman");
+            p2.setAño(2014);
+            Console.WriteLine("{0}({1})", p2.setTitulo(), p2.setAño());
         }
     }
 }
