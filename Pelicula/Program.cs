@@ -1,7 +1,35 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Pelicula
 {
+    class Persona
+    {
+
+        public string nombre;
+        public List<Persona>personas;
+        public Persona(string nombre)
+        {
+            this.nombre = nombre;
+            personas = new List<Persona>();
+        }
+        public string getNombre()
+        {
+            return nombre;
+        }
+        public void AgregaNombre(Persona n)
+        {
+            personas.Add(n);
+        }
+        public void Print()
+        {
+            Console.WriteLine(nombre);
+            foreach(Persona n in personas)
+            {
+                Console.WriteLine(n.getNombre());
+            }
+        }
+    }
     class Pelicula
     {
         private string titulo;
@@ -70,6 +98,11 @@ namespace Pelicula
             p2.setTitulo("Birdman");
             p2.setAño(2014);
             Console.WriteLine("{0}({1})", p2.getTitulo(), p2.getAño());
+            Persona u1 = new Persona("Juan");
+            Console.WriteLine(u1.getNombre());
+            u1.AgregaNombre(new Persona("kim"));
+            u1.AgregaNombre(new Persona("levi"));
+            u1.Print();
         }
     }
 }
