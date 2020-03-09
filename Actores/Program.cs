@@ -1,15 +1,23 @@
 ﻿using System.Collections.Generic;
+using System.Collections;
 
 namespace Actores
 {
     class Pelicula
     {
-        private string actores;
-        public AgregarActor(string actores)
-        {
-            this.actores = actores;
-            Actor = new List<Actors>();
-        }
+         public List <string> Famosos = new List <string>();
+         public void AgregarActor(Actor Pelicula)
+         {
+             Famosos.Add(Actor)
+         }
+         public void ImprimeActores()
+         {
+             Console.WriteLine(Actor);
+            foreach(Famosos n in Actor)
+            {
+                Console.WriteLine();
+            }
+         }
 
     }
     class Program
