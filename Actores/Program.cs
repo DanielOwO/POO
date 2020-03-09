@@ -8,7 +8,7 @@ namespace Actores
          public List <string> Famosos = new List <string>();
          public void AgregarActor(Actor Pelicula)
          {
-             Famosos.Add(Actor)
+             Famosos.Add(Actor);
          }
          public void ImprimeActores()
          {
