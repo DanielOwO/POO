@@ -8,4 +8,4 @@
 
 [Actividad 4](./UML/README.md)
 
-[Actividad 5](./Paso de parametros/Ejemplo/Program.cs)
+[Actividad 5](./Parametros/Program.cs)
