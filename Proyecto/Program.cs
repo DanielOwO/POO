@@ -4,12 +4,21 @@ namespace Proyecto
 {
     class Producto
     {
-        private codigo;
+        protected string codigo;      
+        protected string descripcion;
+        protected int precios;
+        protected int likes;
     }
 
     class ProductoDB
     {
 
+    }
+    class PrecioFecha
+    {
+        DateTime FechaInicio;
+        DateTime FechaFinal;
+        Decimal Precio;
     }
     class Program
     {
