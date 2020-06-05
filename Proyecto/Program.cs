@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Proyecto
 {
@@ -24,6 +25,7 @@ namespace Proyecto
     {
         static void Main(string[] args)
         {
+            List<Producto> productos = new List<Producto>();
             Console.WriteLine("Hello World!");
         }
     }
