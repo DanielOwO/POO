@@ -1,0 +1,3 @@
+0000|Nintendo DSi XL
+0001|Samsung Galaxy S10+
+0002|GTX GeForce Nvidia 2080Ti
