@@ -105,10 +105,10 @@ namespace Musicos
             Donald.Afina();
             Donald.Tocar();
         List<Musico> Musicos = new List<Musico>();
-            Musicos.add(Marcial);
-            Musicos.add(Javier);
-            Musicos.add(Tom);
-            Musicos.add(Donald);
+            Musicos.Add(Marcial);
+            Musicos.Add(Javier);
+            Musicos.Add(Tom);
+            Musicos.Add(Donald);
         foreach(Musico n in Musicos)
         {
             n.saluda();
