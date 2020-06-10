@@ -56,7 +56,13 @@ namespace Proyecto
             }
             return Electronica;
         }
+
+       
+        
+
+        
     }
+  
        
     class PrecioFecha
     {
@@ -73,6 +79,9 @@ namespace Proyecto
 
         }
     }
+   
+
+    
     class Program
     {
         static void Main(string[] args)
@@ -100,24 +109,92 @@ namespace Proyecto
             ProductoDB.Lista("Abarrotes.txt", Abarrotes);
             ProductoDB.Lista("Miscelanea.txt", Miscelanea);
 
-            Console.WriteLine("Productos actuales en inventario:"); 
-            Lector = ProductoDB.ReadFromTXT(@".\Electronica.txt");
-            foreach(Producto p in Lector)
+            int x;
+            
+            Console.WriteLine("Bienvenido a mi tienda, necesitas algo?"); 
+            Console.WriteLine("[SI] = 1");
+            Console.WriteLine("[NO] = 2");
+               try
             {
-                Console.WriteLine("Codigo: {0} Descripcion: {1} Likes: {2} Precio: ${3}", p.codigo, p.descripcion, p.likes, p.Precio);
+                x = Int32.Parse(Console.ReadLine());
+            }
+            catch(FormatException)
+            {
+                Console.WriteLine("ERROR: Solo se pueden utilizar numeros.");
+            }
+            finally
+            {
             }
 
-            Lector = ProductoDB.ReadFromTXT(@".\Abarrotes.txt");
-            foreach(Producto p in Lector)
+            if( x == 1)
             {
-                Console.WriteLine("Codigo: {0} Descripcion: {1} Likes: {2} Precio: ${3}", p.codigo, p.descripcion, p.likes, p.Precio);
-            }
+                Console.WriteLine("Que area de nuestra tienda buscas?");
+                Console.WriteLine("[Electrinica] = 1");
+                Console.WriteLine("[Abarrotes] = 2");
+                Console.WriteLine("[Miscelanea] = 3");
+               try
+             {
+                x = Int32.Parse(Console.ReadLine());
+             }
+               catch(FormatException)
+             {
+                Console.WriteLine("ERROR: Solo se pueden utilizar numeros.");
+             }
+             finally
+             {
 
-            Lector = ProductoDB.ReadFromTXT(@".\Miscelanea.txt");
-            foreach(Producto p in Lector)
-            {
-                Console.WriteLine("Codigo: {0} Descripcion: {1} Likes: {2} Precio: ${3}", p.codigo, p.descripcion, p.likes, p.Precio);
+             }
+             switch(x)
+             {
+                 case 1:
+                 {
+                      Console.WriteLine("Productos actuales en inventario:"); 
+                   Lector = ProductoDB.ReadFromTXT(@".\Electronica.txt");
+                    foreach(Producto p in Lector)
+                      {
+                     Console.WriteLine("Codigo: {0} Descripcion: {1} Likes: {2} Precio: ${3}", p.codigo, p.descripcion, p.likes, p.Precio);
+                      }
+                 }break;
+                 
+                 case 2:
+                 {
+                     Console.WriteLine("Productos actuales en inventario:");
+                     Lector = ProductoDB.ReadFromTXT(@".\Abarrotes.txt");
+                    foreach(Producto p in Lector)
+                     {
+                     Console.WriteLine("Codigo: {0} Descripcion: {1} Likes: {2} Precio: ${3}", p.codigo, p.descripcion, p.likes, p.Precio);
+                     }
+                 }break;
+                 case 3:
+                 {
+                     Console.WriteLine("Productos actuales en inventario:");
+                     Lector = ProductoDB.ReadFromTXT(@".\Miscelanea.txt");
+                    foreach(Producto p in Lector)
+                    {
+                     Console.WriteLine("Codigo: {0} Descripcion: {1} Likes: {2} Precio: ${3}", p.codigo, p.descripcion, p.likes, p.Precio);
+                    }
+                 }break;
+                 default:
+                 {
+                     Console.WriteLine("Lo siento, el area seleccionada es desconocida. :c");
+                     Console.ReadKey();
+                 }break;
+             }
+
+
             }
+            else
+            {
+                Console.WriteLine("Gracias por su visita!");
+                Console.ReadKey();
+            }
+            
+            
+            
+
+           
+
+            
 
             
             
