@@ -109,7 +109,7 @@ namespace Proyecto
             ProductoDB.Lista("Abarrotes.txt", Abarrotes);
             ProductoDB.Lista("Miscelanea.txt", Miscelanea);
 
-            int x;
+            int x = 0;
             
             Console.WriteLine("Bienvenido a mi tienda, necesitas algo?"); 
             Console.WriteLine("[SI] = 1");
