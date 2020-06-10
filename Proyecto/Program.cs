@@ -32,29 +32,29 @@ namespace Proyecto
     class ProductoDB
     {
         //Creacion del archivo de texto
-        public static void WriteToTXT(string path, List<Producto> productos)
+        public static void WriteToTXT(string path, List<Producto> Electronica)
         {
             StreamWriter txtOut = new StreamWriter(new FileStream(path, FileMode.Create, FileAccess.Write));
-            foreach(Producto p in productos)
+            foreach(Producto p in Electronica)
             {
                 txtOut.WriteLine("{0}|{1}|{2}|{3}|{4}|{5}", p.codigo, p.descripcion, p.likes, p.Precio, p.FechaInicio, p.FechaFinal);
             }
             txtOut.Close();
         }
         //Leer del archivo de texto
-        /*public static List<Producto> ReadFromTXT(string path)
+        public static List<Producto> ReadFromTXT(string path)
         {
-            List<Producto> productos = new List<Producto>();
+            List<Producto> Electronica = new List<Producto>();
             StreamReader txtIn = new StreamReader(new FileStream(path, FileMode.Open, FileAccess.Read));
             while(txtIn.Peek() != -1)
             {
                 string line = txtIn.ReadLine();
                 string[] columns = line.Split('|');
-                Producto p = new Producto(0,0,0,0,0,0, Int32.Parse(columns[3]), columns[0], columns[1], Int32.Parse(columns[2]));
-                productos.Add(p);
+                Producto p = new Producto(1,2,2,2,2,2, Int32.Parse(columns[3]), columns[0], columns[1], Int32.Parse(columns[2]));
+                Electronica.Add(p);
             }
-            return productos;
-        }*/
+            return Electronica;
+        }
     }
        
     class PrecioFecha
@@ -76,21 +76,31 @@ namespace Proyecto
     {
         static void Main(string[] args)
         {
-            //Declaracion de la lista productos
-            List<Producto> productos = new List<Producto>();
-            productos.Add(new Producto(2018, 6, 6, 2020, 7, 6, 3000,"0000", "Nintendo DSi XL", 1100));
-            productos.Add(new Producto(2020, 6, 6, 2019, 9, 6, 9800,"0001", "Samsung Galaxy S10+", 4800));
-            productos.Add(new Producto(2009, 6, 6, 2020, 10, 6, 10000,"0002", "GTX GeForce Nvidia 2080Ti", 69));
+            //Declaracion de la lista Electronica
+            List<Producto> Electronica = new List<Producto>();
+            Electronica.Add(new Producto(2018, 6, 6, 2020, 7, 6, 3000,"0000", "Nintendo DSi XL", 1100));
+            Electronica.Add(new Producto(2020, 6, 6, 2019, 9, 6, 9800,"0001", "Samsung Galaxy S10+", 4800));
+            Electronica.Add(new Producto(2009, 6, 6, 2020, 10, 6, 10000,"0002", "GTX GeForce Nvidia 2080Ti", 69));
+            //Declaracion de la lista abarrotes
+            List<Producto> Abarrotes = new List<Producto>();
+            Abarrotes.Add(new Producto(2020, 5, 5, 2020, 5, 12, 35,"0003", "Pan de barra BIMBO", 50));
+            Abarrotes.Add(new Producto(2020, 5, 6, 2020, 5, 12, 42,"0004", "Jamon virgina BAFAR", 30));
+            Abarrotes.Add(new Producto(2020, 4, 5, 2020, 5, 12, 32,"0005", "Queso amarillo FUD", 40));
+            //Declaracion de la lista Miscelanea
+            List<Producto> Miscelanea = new List<Producto>();
+            Miscelanea.Add(new Producto(2020, 5, 5, 2020, 5, 15, 18,"0006", "Hojas de Roble", 13));
+            Miscelanea.Add(new Producto(2020, 5, 5, 2020, 5, 15, 18,"0007", "Valla de Roble oscuro", 80));
+            Miscelanea.Add(new Producto(2020, 5, 5, 2020, 5, 15, 18,"0008", "Peonía", 99));
 
             //Llamada al procedimiento writetoTXT
-           ProductoDB.WriteToTXT("productos.txt", productos); 
+           ProductoDB.WriteToTXT("Electronica.txt", Electronica); 
             Console.WriteLine("Productos actuales en inventario:"); 
-           // productos = ProductoDB.ReadFromTXT(@".\productos.txt");
+            Electronica = ProductoDB.ReadFromTXT(@".\Electronica.txt");
 
-          //  foreach(Producto p in productos)
-          //  {
-          //      Console.WriteLine("Codigo: {0} Descripcion: {1} Likes: {2} Precio: ${3}", p.codigo, p.descripcion, p.likes, p.Precio);
-           // }
+            foreach(Producto p in Electronica)
+            {
+                Console.WriteLine("Codigo: {0} Descripcion: {1} Likes: {2} Precio: ${3}", p.codigo, p.descripcion, p.likes, p.Precio);
+            }
             
         }
     }
