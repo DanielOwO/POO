@@ -6,8 +6,12 @@ using System.Collections;
 namespace Proyecto
 {
     //Declaracion de la clase producto
-    class Producto:PrecioFecha
+    class Producto:PrecioFecha, IComparable
     {
+        public int CompareTo(object obj)
+        {
+            return likes.CompareTo(((Producto) obj).likes);
+        }
         //Constructor
         public Producto(int yy, int mm, int dd, int yyf, int mmf, int ddf, int valor, string c, string d, int l):base(yy, mm, dd, yyf, mmf, ddf, valor)
         {
@@ -152,6 +156,7 @@ namespace Proyecto
                  {
                       Console.WriteLine("Productos actuales en inventario:"); 
                    Lector = ProductoDB.ReadFromTXT(@".\Electronica.txt");
+                   Lector.Sort();
                     foreach(Producto p in Lector)
                       {
                      Console.WriteLine("Codigo: {0} Descripcion: {1} Likes: {2} Precio: ${3}", p.codigo, p.descripcion, p.likes, p.Precio);
@@ -162,6 +167,7 @@ namespace Proyecto
                  {
                      Console.WriteLine("Productos actuales en inventario:");
                      Lector = ProductoDB.ReadFromTXT(@".\Abarrotes.txt");
+                     Lector.Sort();
                     foreach(Producto p in Lector)
                      {
                      Console.WriteLine("Codigo: {0} Descripcion: {1} Likes: {2} Precio: ${3}", p.codigo, p.descripcion, p.likes, p.Precio);
@@ -171,6 +177,7 @@ namespace Proyecto
                  {
                      Console.WriteLine("Productos actuales en inventario:");
                      Lector = ProductoDB.ReadFromTXT(@".\Miscelanea.txt");
+                     Lector.Sort();
                     foreach(Producto p in Lector)
                     {
                      Console.WriteLine("Codigo: {0} Descripcion: {1} Likes: {2} Precio: ${3}", p.codigo, p.descripcion, p.likes, p.Precio);
