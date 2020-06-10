@@ -183,10 +183,14 @@ namespace Proyecto
 
 
             }
-            else
+            else if (x == 2)
             {
                 Console.WriteLine("Gracias por su visita!");
                 Console.ReadKey();
+            }
+            else
+            {
+                Console.WriteLine("Su numero es invalido, vuelva a intentarlo :)");
             }
             
             
