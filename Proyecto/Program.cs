@@ -144,6 +144,7 @@ namespace Proyecto
              finally
              {
              }
+             //Uso de los casos y uso del metodo ReadFromTXT
              switch(x)
              {
                  case 1:
@@ -177,6 +178,7 @@ namespace Proyecto
                  default:
                  {
                      Console.WriteLine("Lo siento, el area seleccionada es desconocida. :c");
+                     //Salida del programa
                      Console.ReadKey();
                  }break;
              }
@@ -186,6 +188,7 @@ namespace Proyecto
             else if (x == 2)
             {
                 Console.WriteLine("Gracias por su visita!");
+                //Salida del programa
                 Console.ReadKey();
             }
             else
