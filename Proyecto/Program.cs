@@ -114,6 +114,7 @@ namespace Proyecto
             Console.WriteLine("Bienvenido a mi tienda, necesitas algo?"); 
             Console.WriteLine("[SI] = 1");
             Console.WriteLine("[NO] = 2");
+            //Atrapando posibles excepciones.
                try
             {
                 x = Int32.Parse(Console.ReadLine());
@@ -142,7 +143,6 @@ namespace Proyecto
              }
              finally
              {
-
              }
              switch(x)
              {
