@@ -32,15 +32,16 @@ namespace Proyecto
     class ProductoDB
     {
         //Creacion del archivo de texto
-        public static void WriteToTXT(string path, List<Producto> Electronica)
+        public static void Lista(string path, List<Producto> items)
         {
             StreamWriter txtOut = new StreamWriter(new FileStream(path, FileMode.Create, FileAccess.Write));
-            foreach(Producto p in Electronica)
+            foreach(Producto p in items)
             {
                 txtOut.WriteLine("{0}|{1}|{2}|{3}|{4}|{5}", p.codigo, p.descripcion, p.likes, p.Precio, p.FechaInicio, p.FechaFinal);
             }
             txtOut.Close();
         }
+      
         //Leer del archivo de texto
         public static List<Producto> ReadFromTXT(string path)
         {
@@ -88,19 +89,37 @@ namespace Proyecto
             Abarrotes.Add(new Producto(2020, 4, 5, 2020, 5, 12, 32,"0005", "Queso amarillo FUD", 40));
             //Declaracion de la lista Miscelanea
             List<Producto> Miscelanea = new List<Producto>();
-            Miscelanea.Add(new Producto(2020, 5, 5, 2020, 5, 15, 18,"0006", "Hojas de Roble", 13));
-            Miscelanea.Add(new Producto(2020, 5, 5, 2020, 5, 15, 18,"0007", "Valla de Roble oscuro", 80));
-            Miscelanea.Add(new Producto(2020, 5, 5, 2020, 5, 15, 18,"0008", "Peonía", 99));
+            Miscelanea.Add(new Producto(2020, 5, 5, 2020, 5, 12, 50,"0006", "Hojas de Roble", 13));
+            Miscelanea.Add(new Producto(2020, 5, 5, 2020, 5, 12, 250,"0007", "Valla de Roble oscuro", 80));
+            Miscelanea.Add(new Producto(2020, 5, 5, 2020, 5, 12, 149,"0008", "Peonía", 99));
+            //Lista que lee los archivos de texto
+            List<Producto> Lector = new List<Producto>();
 
-            //Llamada al procedimiento writetoTXT
-           ProductoDB.WriteToTXT("Electronica.txt", Electronica); 
+            //Llamada al procedimiento Lista
+           ProductoDB.Lista("Electronica.txt", Electronica); 
+            ProductoDB.Lista("Abarrotes.txt", Abarrotes);
+            ProductoDB.Lista("Miscelanea.txt", Miscelanea);
+
             Console.WriteLine("Productos actuales en inventario:"); 
-            Electronica = ProductoDB.ReadFromTXT(@".\Electronica.txt");
-
-            foreach(Producto p in Electronica)
+            Lector = ProductoDB.ReadFromTXT(@".\Electronica.txt");
+            foreach(Producto p in Lector)
             {
                 Console.WriteLine("Codigo: {0} Descripcion: {1} Likes: {2} Precio: ${3}", p.codigo, p.descripcion, p.likes, p.Precio);
             }
+
+            Lector = ProductoDB.ReadFromTXT(@".\Abarrotes.txt");
+            foreach(Producto p in Lector)
+            {
+                Console.WriteLine("Codigo: {0} Descripcion: {1} Likes: {2} Precio: ${3}", p.codigo, p.descripcion, p.likes, p.Precio);
+            }
+
+            Lector = ProductoDB.ReadFromTXT(@".\Miscelanea.txt");
+            foreach(Producto p in Lector)
+            {
+                Console.WriteLine("Codigo: {0} Descripcion: {1} Likes: {2} Precio: ${3}", p.codigo, p.descripcion, p.likes, p.Precio);
+            }
+
+            
             
         }
     }
